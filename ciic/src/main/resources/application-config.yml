@@ -1,0 +1,9 @@
+workflow:
+    requestUrl: http://127.0.0.1:8089/ark-web/api/test/workflowStartForCIIC
+    workflowList:
+        - code: 10000S
+          refCode: 03
+          time: 1
+        - code: 20000S
+          refCode: 03
+          time: 2
