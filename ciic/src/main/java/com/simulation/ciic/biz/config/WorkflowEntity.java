@@ -13,6 +13,14 @@ import lombok.Data;
 public class WorkflowEntity {
     private String code;
     private String refCode;
-    private Long time;
+    private String nextCode;
+    private String preCode;
+
+    /**
+     * 0 送 1取
+     */
+    private String operateType;
+
+    private Double time;
 
 }

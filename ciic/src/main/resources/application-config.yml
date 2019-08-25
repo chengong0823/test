@@ -1,9 +1,505 @@
 workflow:
-    requestUrl: http://127.0.0.1:8089/ark-web/api/test/workflowStartForCIIC
-    workflowList:
-        - code: 10000S
-          refCode: 03
-          time: 1
-        - code: 20000S
-          refCode: 03
-          time: 2
+      requestUrl: http://172.16.11.5:8089/ark-web/api/test/workflowStartForCIIC
+      workflowList:
+      - code: APA1-a-001
+        refCode: APA1-a-101
+        nextCode: APA1-a-002
+        time: 36
+      - code: APA1-a-002
+        preCode: APA1-a-001
+        refCode: APA1-a-102
+        nextCode: APA1-a-003
+        time: 36
+      - code: APA1-a-003
+        preCode: APA1-a-002
+        refCode: APA1-a-103
+
+      - code: APA1-b-001
+        refCode: APA1-b-101
+        nextCode: APA1-b-002
+        time: 36
+      - code: APA1-b-002
+        preCode: APA1-b-001
+        refCode: APA1-b-102
+        nextCode: APA1-b-003
+        time: 36
+      - code: APA1-b-003
+        preCode: APA1-b-002
+        refCode: APA1-b-103
+
+      - code: APA1-c-001
+        refCode: APA1-c-101
+        nextCode: APA1-c-002
+        time: 36
+      - code: APA1-c-002
+        preCode: APA1-c-001
+        refCode: APA1-c-102
+        nextCode: APA1-c-003
+        time: 36
+      - code: APA1-c-003
+        preCode: APA1-c-002
+        refCode: APA1-c-103
+
+      - code: APA2-a-001
+        refCode: APA2-a-101
+        nextCode: APA2-a-002
+        time: 24
+      - code: APA2-a-002
+        preCode: APA2-a-001
+        refCode: APA2-a-102
+        nextCode: APA2-a-003
+        time: 24
+      - code: APA2-a-003
+        preCode: APA2-a-002
+        refCode: APA2-a-103
+
+      - code: APA2-b-001
+        refCode: APA2-b-101
+        nextCode: APA2-b-002
+        time: 24
+      - code: APA2-b-002
+        preCode: APA2-b-001
+        refCode: APA2-b-102
+        nextCode: APA2-b-003
+        time: 24
+      - code: APA2-b-003
+        preCode: APA2-b-002
+        refCode: APA2-b-103
+
+      - code: APA3-b-001
+        refCode: APA3-b-101
+        nextCode: APA3-b-002
+        time: 48
+      - code: APA3-b-002
+        preCode: APA3-b-001
+        refCode: APA3-b-102
+        nextCode: APA3-b-003
+        time: 48
+      - code: APA3-b-003
+        preCode: APA3-b-002
+        refCode: APA3-b-103
+
+      - code: APA3-c-001
+        refCode: APA3-c-101
+        nextCode: APA3-c-002
+        time: 48
+      - code: APA3-c-002
+        preCode: APA3-c-001
+        refCode: APA3-c-102
+        nextCode: APA3-c-003
+        time: 48
+      - code: APA3-c-003
+        preCode: APA3-c-002
+        refCode: APA3-c-103
+
+      - code: APA3-d-001
+        refCode: APA3-d-101
+        nextCode: APA3-d-002
+        time: 48
+      - code: APA3-d-002
+        preCode: APA3-d-001
+        refCode: APA3-d-102
+        nextCode: APA3-d-003
+        time: 48
+      - code: APA3-d-003
+        preCode: APA3-d-002
+        refCode: APA3-d-103
+
+      - code: UCS1-a-001
+        refCode: UCS1-a-101
+        nextCode: UCS1-a-002
+        time: 50
+      - code: UCS1-a-002
+        preCode: UCS1-a-001
+        refCode: UCS1-a-102
+        nextCode: UCS1-a-003
+        time: 50
+      - code: UCS1-a-003
+        preCode: UCS1-a-002
+        refCode: UCS1-a-103
+
+      - code: UCS1-b-001
+        refCode: UCS1-b-101
+        nextCode: UCS1-b-002
+        time: 50
+      - code: UCS1-b-002
+        preCode: UCS1-b-001
+        refCode: UCS1-b-102
+        nextCode: UCS1-b-003
+        time: 50
+      - code: UCS1-b-003
+        preCode: UCS1-b-002
+        refCode: UCS1-b-103
+
+      - code: UCS5-a-001
+        refCode: UCS5-a-101
+        nextCode: UCS5-a-002
+        time: 20
+      - code: UCS5-a-002
+        preCode: UCS5-a-001
+        refCode: UCS5-a-102
+        nextCode: UCS5-a-003
+        time: 20
+      - code: UCS5-a-003
+        preCode: UCS5-a-002
+        refCode: UCS5-a-103
+
+      - code: UCS5-b-001
+        refCode: UCS5-b-101
+        nextCode: UCS5-b-002
+        time: 20
+      - code: UCS5-b-002
+        preCode: UCS5-b-001
+        refCode: UCS5-b-102
+        nextCode: UCS5-b-003
+        time: 20
+      - code: UCS5-b-003
+        preCode: UCS5-b-002
+        refCode: UCS5-b-103
+
+      - code: UCS5-a1-001
+        refCode: UCS5-a1-101
+        nextCode: UCS5-a1-002
+        time: 20
+      - code: UCS5-a1-002
+        preCode: UCS5-a1-001
+        refCode: UCS5-a1-102
+        nextCode: UCS5-a1-003
+        time: 20
+      - code: UCS5-a1-003
+        preCode: UCS5-a1-002
+        refCode: UCS5-a1-103
+
+      - code: MSG1-a-001
+        refCode: MSG1-a-101
+        nextCode: MSG1-a-002
+        time: 12
+      - code: MSG1-a-002
+        preCode: MSG1-a-001
+        refCode: MSG1-a-102
+        nextCode: MSG1-a-003
+        time: 12
+      - code: MSG1-a-003
+        preCode: MSG1-a-002
+        refCode: MSG1-a-103
+
+      - code: MSG2-a-001
+        refCode: MSG2-a-101
+        nextCode: MSG2-a-002
+        time: 12
+      - code: MSG2-a-002
+        preCode: MSG2-a-001
+        refCode: MSG2-a-102
+        nextCode: MSG2-a-003
+        time: 12
+      - code: MSG2-a-003
+        preCode: MSG2-a-002
+        refCode: MSG2-a-103
+
+      - code: MSG7-a-001
+        refCode: MSG7-a-101
+        nextCode: MSG7-a-002
+        time: 12
+      - code: MSG7-a-002
+        preCode: MSG7-a-001
+        refCode: MSG7-a-102
+        nextCode: MSG7-a-003
+        time: 12
+      - code: MSG7-a-003
+        preCode: MSG7-a-002
+        refCode: MSG7-a-103
+
+      - code: MSG9-a-001
+        refCode: MSG9-a-101
+        nextCode: MSG9-a-002
+        time: 8
+      - code: MSG9-a-002
+        preCode: MSG9-a-001
+        refCode: MSG9-a-102
+        nextCode: MSG9-a-003
+        time: 8
+      - code: MSG9-a-003
+        preCode: MSG9-a-002
+        refCode: MSG9-a-103
+
+      - code: 新线-a-001
+        refCode: 新线-a-101
+        nextCode: 新线-a-002
+        time: 12
+      - code: 新线-a-002
+        preCode: 新线-a-001
+        refCode: 新线-a-102
+        nextCode: 新线-a-003
+        time: 12
+      - code: 新线-a-003
+        preCode: 新线-a-002
+        refCode: 新线-a-103
+
+      - code: APA1-2-001
+        refCode: APA1-2-101
+        nextCode: APA1-2-002
+        time: 20
+      - code: APA1-2-002
+        preCode: APA1-2-001
+        refCode: APA1-2-102
+
+      - code: APA2-2-001
+        refCode: APA2-2-101
+        nextCode: APA2-2-002
+        time: 40
+      - code: APA2-2-002
+        preCode: APA2-2-001
+        refCode: APA2-2-102
+
+      - code: APA2-2-003
+        refCode: APA2-2-103
+        nextCode: APA2-2-004
+        time: 40
+      - code: APA2-2-004
+        preCode: APA2-2-003
+        refCode: APA2-2-104
+
+      - code: APA3-2-001
+        refCode: APA3-2-101
+        nextCode: APA3-2-002
+        time: 20
+      - code: APA3-2-002
+        preCode: APA3-2-001
+        refCode: APA3-2-102
+
+      - code: UCS0-2-001
+        refCode: UCS0-2-101
+        nextCode: UCS0-2-002
+        time: 20
+      - code: UCS0-2-002
+        preCode: UCS0-2-001
+        refCode: UCS0-2-102
+
+      - code: UCS1-2-001
+        refCode: UCS1-2-101
+        nextCode: UCS1-2-002
+        time: 20
+      - code: UCS1-2-002
+        preCode: UCS1-2-001
+        refCode: UCS1-2-102
+
+      - code: UCS5-1-2-001
+        refCode: UCS5-1-2-101
+        nextCode: UCS5-1-2-002
+        time: 48
+      - code: UCS5-1-2-002
+        preCode: UCS5-1-2-001
+        refCode: UCS5-1-2-102
+
+      - code: UCS5-2-2-001
+        refCode: UCS5-2-2-101
+        nextCode: UCS5-2-2-002
+        time: 48
+      - code: UCS5-2-2-002
+        preCode: UCS5-2-2-001
+        refCode: UCS5-2-2-102
+
+      - code: UCS5-3-2-001
+        refCode: UCS5-3-2-101
+        nextCode: UCS5-3-2-002
+        time: 48
+      - code: UCS5-3-2-002
+        preCode: UCS5-3-2-001
+        refCode: UCS5-3-2-102
+
+      - code: UCS5-4-2-001
+        refCode: UCS5-4-2-101
+        nextCode: UCS5-4-2-002
+        time: 48
+      - code: UCS5-4-2-002
+        preCode: UCS5-4-2-001
+        refCode: UCS5-4-2-102
+
+      - code: MSG1-2-001
+        refCode: MSG1-2-101
+        nextCode: MSG1-2-002
+        time: 15
+      - code: MSG1-2-002
+        preCode: MSG1-2-001
+        refCode: MSG1-2-102
+
+      - code: MSG2-2-001
+        refCode: MSG2-2-101
+        nextCode: MSG2-2-002
+        time: 15
+      - code: MSG2-2-002
+        preCode: MSG2-2-001
+        refCode: MSG2-2-102
+
+      - code: MSG7-2-001
+        refCode: MSG7-2-101
+        nextCode: MSG7-2-002
+        time: 15
+      - code: MSG7-2-002
+        preCode: MSG7-2-001
+        refCode: MSG7-2-102
+
+      - code: MSG9-2-001
+        refCode: MSG9-2-101
+        nextCode: MSG9-2-002
+        time: 10
+      - code: MSG9-2-002
+        preCode: MSG9-2-001
+        refCode: MSG9-2-102
+
+      - code: 新线-1-2-001
+        refCode: 新线-1-2-101
+        nextCode: 新线-1-2-002
+        time: 36
+      - code: 新线-1-2-002
+        preCode: 新线-1-2-001
+        refCode: 新线-1-2-102
+
+      - code: 新线-2-2-001
+        refCode: 新线-2-2-101
+        nextCode: 新线-2-2-002
+        time: 36
+      - code: 新线-2-2-002
+        preCode: 新线-2-2-001
+        refCode: 新线-2-2-102
+
+      - code: 新线-3-2-001
+        refCode: 新线-3-2-101
+        nextCode: 新线-3-2-002
+        time: 36
+      - code: 新线-3-2-002
+        preCode: 新线-3-2-001
+        refCode: 新线-3-2-102
+
+      - code: PP1-1-2-001
+        refCode: PP1-1-2-101
+        nextCode: PP1-1-2-002
+        time: 34
+      - code: PP1-1-2-002
+        preCode: PP1-1-2-001
+        refCode: PP1-1-2-102
+
+      - code: PP1-2-2-001
+        refCode: PP1-2-2-101
+        nextCode: PP1-2-2-002
+        time: 34
+      - code: PP1-2-2-002
+        preCode: PP1-2-2-001
+        refCode: PP1-2-2-102
+
+      - code: PP2-1-2-001
+        refCode: PP2-1-2-101
+        nextCode: PP2-1-2-002
+        time: 34
+      - code: PP2-1-2-002
+        preCode: PP2-1-2-001
+        refCode: PP2-1-2-102
+
+      - code: PP2-2-2-001
+        refCode: PP2-2-2-101
+        nextCode: PP2-2-2-002
+        time: 34
+      - code: PP2-2-2-002
+        preCode: PP2-2-2-001
+        refCode: PP2-2-2-102
+
+      - code: SENSOR-1-2-001
+        refCode: SENSOR-1-2-101
+        nextCode: SENSOR-1-2-002
+        time: 60
+      - code: SENSOR-1-2-002
+        preCode: SENSOR-1-2-001
+        refCode: SENSOR-1-2-102
+
+      - code: SENSOR-2-2-001
+        refCode: SENSOR-2-2-101
+        nextCode: SENSOR-2-2-002
+        time: 60
+      - code: SENSOR-2-2-002
+        preCode: SENSOR-2-2-001
+        refCode: SENSOR-2-2-102
+
+      - code: SENSOR-3-2-001
+        refCode: SENSOR-3-2-101
+        nextCode: SENSOR-3-2-002
+        time: 60
+      - code: SENSOR-3-2-002
+        preCode: SENSOR-3-2-001
+        refCode: SENSOR-3-2-102
+
+      - code: SJ-1-001
+        nextCode: SJ-1-001
+        operateType: 1
+        time: 2
+      - code: SJ-1-002
+        nextCode: SJ-1-002
+        operateType: 1
+        time: 2
+      - code: SJ-1-003
+        nextCode: SJ-1-003
+        operateType: 1
+        time: 2
+      - code: SJ-1-004
+        nextCode: SJ-1-004
+        operateType: 1
+        time: 2
+      - code: SJ-2-001
+        nextCode: SJ-2-001
+        operateType: 1
+        time: 2
+      - code: SJ-2-002
+        nextCode: SJ-2-002
+        operateType: 1
+        time: 2
+      - code: SJ-2-003
+        nextCode: SJ-2-003
+        operateType: 1
+        time: 2
+      - code: SJ-2-004
+        nextCode: SJ-2-004
+        operateType: 1
+        time: 2
+
+      - code: APA1-4-001
+        nextCode: APA1-4-001
+        time: 13
+
+      - code: APA2-4-001
+        nextCode: APA2-4-001
+        time: 17
+
+      - code: APA3-4-001
+        nextCode: APA3-4-001
+        time: 17
+
+      - code: UCS0-4-001
+        nextCode: UCS0-4-001
+        time: 16
+
+      - code: UCS1-4-001
+        nextCode: UCS1-4-001
+        time: 20
+
+      - code: UCS5-4-001
+        nextCode: UCS5-4-001
+        time: 9
+
+      - code: MSG1-4-001
+        nextCode: MSG1-4-001
+        time: 20
+
+      - code: MSG2-4-001
+        nextCode: MSG2-4-001
+        time: 24
+
+      - code: MSG7-4-001
+        nextCode: MSG7-4-001
+        time: 20
+
+      - code: MSG9-4-001
+        nextCode: MSG9-4-001
+        time: 15
+
+      - code: LINE-4-001
+        nextCode: LINE-4-001
+        time: 15

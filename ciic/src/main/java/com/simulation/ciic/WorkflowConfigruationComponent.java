@@ -1,5 +1,6 @@
 package com.simulation.ciic;
 
+import com.geekplus.optimus.common.util.string.StringUtil;
 import com.simulation.ciic.biz.config.BaseContext;
 import com.simulation.ciic.biz.config.WorkflowConfig;
 import com.simulation.ciic.biz.config.WorkflowExecuteThreadPool;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 /**
  * 启动时调用流程
@@ -36,12 +38,25 @@ public class WorkflowConfigruationComponent implements CommandLineRunner {
         log.info("--------初始化流程begin----------");
         workflowConfig.getWorkflowList().forEach(e->{
             try {
-                log.info("workflow execute,code:{}",e.getCode());
-                workflowExecuteThreadPool.addNewWorkflow(e.getCode(), restTemplate, workflowConfig.getRequestUrl(), 0);
-                Calendar time = Calendar.getInstance();
-                time.add(Calendar.MINUTE, e.getTime().intValue());
-                BaseContext.getWorkflowMap().put(e.getCode(), time.getTime());
-                workflowExecuteThreadPool.addNewWorkflow(e.getRefCode(), restTemplate, workflowConfig.getRequestUrl(), 1);
+                if(Objects.isNull(e.getPreCode())){
+                    String operateTpye=e.getOperateType();
+                    if(StringUtil.isEmpty(operateTpye)||Objects.isNull(operateTpye)){
+                        operateTpye="0";
+                    }else{
+                        operateTpye="1";
+                    }
+                    log.info("workflow execute,code:{},operateType:{}",e.getCode(),operateTpye);
+                    workflowExecuteThreadPool.addNewWorkflow(e.getCode(), restTemplate, workflowConfig.getRequestUrl(), Integer.valueOf(operateTpye));
+                    Calendar time = Calendar.getInstance();
+                    time.add(Calendar.MINUTE, e.getTime().intValue());
+                    if(Objects.nonNull(e.getNextCode())&&StringUtil.isNotEmpty(e.getNextCode())){
+                        BaseContext.getWorkflowMap().put(e.getNextCode(), time.getTime());
+                    }
+                    if(Objects.nonNull(e.getRefCode())&& StringUtil.isNotEmpty(e.getRefCode())){
+                        log.info("workflow execute,refcode:{}",e.getRefCode());
+                        workflowExecuteThreadPool.addNewWorkflow(e.getRefCode(), restTemplate, workflowConfig.getRequestUrl(), 1);
+                    }
+                }
             }catch (Exception ex){
                 log.info("workflow execute error");
             }
