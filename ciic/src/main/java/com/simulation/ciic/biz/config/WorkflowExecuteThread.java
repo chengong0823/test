@@ -1,11 +1,9 @@
 package com.simulation.ciic.biz.config;
 
 import com.geekplus.optimus.common.util.json.JSONUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;

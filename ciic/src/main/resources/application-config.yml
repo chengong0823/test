@@ -118,6 +118,19 @@ workflow:
         preCode: UCS1-a-002
         refCode: UCS1-a-103
 
+      - code: UCS1-a1-001
+        refCode: UCS1-a1-101
+        nextCode: UCS1-a1-002
+        time: 50
+      - code: UCS1-a1-002
+        preCode: UCS1-a1-001
+        refCode: UCS1-a1-102
+        nextCode: UCS1-a1-003
+        time: 50
+      - code: UCS1-a1-003
+        preCode: UCS1-a1-002
+        refCode: UCS1-a1-103
+
       - code: UCS1-b-001
         refCode: UCS1-b-101
         nextCode: UCS1-b-002
@@ -130,6 +143,32 @@ workflow:
       - code: UCS1-b-003
         preCode: UCS1-b-002
         refCode: UCS1-b-103
+
+      - code: UCS1-b1-001
+        refCode: UCS1-b1-101
+        nextCode: UCS1-b1-002
+        time: 50
+      - code: UCS1-b1-002
+        preCode: UCS1-b1-001
+        refCode: UCS1-b1-102
+        nextCode: UCS1-b1-003
+        time: 50
+      - code: UCS1-b1-003
+        preCode: UCS1-b1-002
+        refCode: UCS1-b1-103
+
+      - code: UCS1-c1-001
+        refCode: UCS1-c1-101
+        nextCode: UCS1-c1-002
+        time: 50
+      - code: UCS1-c1-002
+        preCode: UCS1-c1-001
+        refCode: UCS1-c1-102
+        nextCode: UCS1-c1-003
+        time: 50
+      - code: UCS1-c1-003
+        preCode: UCS1-c1-002
+        refCode: UCS1-c1-103
 
       - code: UCS5-a-001
         refCode: UCS5-a-101
@@ -222,18 +261,18 @@ workflow:
         preCode: MSG9-a-002
         refCode: MSG9-a-103
 
-      - code: 新线-a-001
-        refCode: 新线-a-101
-        nextCode: 新线-a-002
+      - code: LINE-a-001
+        refCode: LINE-a-101
+        nextCode: LINE-a-002
         time: 12
-      - code: 新线-a-002
-        preCode: 新线-a-001
-        refCode: 新线-a-102
-        nextCode: 新线-a-003
+      - code: LINE-a-002
+        preCode: LINE-a-001
+        refCode: LINE-a-102
+        nextCode: LINE-a-003
         time: 12
-      - code: 新线-a-003
-        preCode: 新线-a-002
-        refCode: 新线-a-103
+      - code: LINE-a-003
+        preCode: LINE-a-002
+        refCode: LINE-a-103
 
       - code: APA1-2-001
         refCode: APA1-2-101
@@ -347,29 +386,29 @@ workflow:
         preCode: MSG9-2-001
         refCode: MSG9-2-102
 
-      - code: 新线-1-2-001
-        refCode: 新线-1-2-101
-        nextCode: 新线-1-2-002
+      - code: LINE-1-2-001
+        refCode: LINE-1-2-101
+        nextCode: LINE-1-2-002
         time: 36
-      - code: 新线-1-2-002
-        preCode: 新线-1-2-001
-        refCode: 新线-1-2-102
+      - code: LINE-1-2-002
+        preCode: LINE-1-2-001
+        refCode: LINE-1-2-102
 
-      - code: 新线-2-2-001
-        refCode: 新线-2-2-101
-        nextCode: 新线-2-2-002
+      - code: LINE-2-2-001
+        refCode: LINE-2-2-101
+        nextCode: LINE-2-2-002
         time: 36
-      - code: 新线-2-2-002
-        preCode: 新线-2-2-001
-        refCode: 新线-2-2-102
+      - code: LINE-2-2-002
+        preCode: LINE-2-2-001
+        refCode: LINE-2-2-102
 
-      - code: 新线-3-2-001
-        refCode: 新线-3-2-101
-        nextCode: 新线-3-2-002
+      - code: LINE-3-2-001
+        refCode: LINE-3-2-101
+        nextCode: LINE-3-2-002
         time: 36
-      - code: 新线-3-2-002
-        preCode: 新线-3-2-001
-        refCode: 新线-3-2-102
+      - code: LINE-3-2-002
+        preCode: LINE-3-2-001
+        refCode: LINE-3-2-102
 
       - code: PP1-1-2-001
         refCode: PP1-1-2-101
@@ -427,38 +466,51 @@ workflow:
         preCode: SENSOR-3-2-001
         refCode: SENSOR-3-2-102
 
+      - code: SENSOR-a-001
+        refCode: SENSOR-a-101
+        nextCode: SENSOR-a-002
+        time: 60
+      - code: SENSOR-a-002
+        refCode: SENSOR-a-102
+        preCode: SENSOR-a-001
+        nextCode: SENSOR-a-003
+        time: 60
+      - code: SENSOR-a-003
+        preCode: SENSOR-a-002
+        refCode: SENSOR-a-103
+
       - code: SJ-1-001
         nextCode: SJ-1-001
         operateType: 1
-        time: 2
+        time: 1
       - code: SJ-1-002
         nextCode: SJ-1-002
         operateType: 1
-        time: 2
+        time: 1
       - code: SJ-1-003
         nextCode: SJ-1-003
         operateType: 1
-        time: 2
+        time: 1
       - code: SJ-1-004
         nextCode: SJ-1-004
         operateType: 1
-        time: 2
+        time: 1
       - code: SJ-2-001
         nextCode: SJ-2-001
         operateType: 1
-        time: 2
+        time: 1
       - code: SJ-2-002
         nextCode: SJ-2-002
         operateType: 1
-        time: 2
+        time: 1
       - code: SJ-2-003
         nextCode: SJ-2-003
         operateType: 1
-        time: 2
+        time: 1
       - code: SJ-2-004
         nextCode: SJ-2-004
         operateType: 1
-        time: 2
+        time: 1
 
       - code: APA1-4-001
         nextCode: APA1-4-001
